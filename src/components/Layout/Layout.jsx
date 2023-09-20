@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
-import { StyledHr, StyledLink, StyledList } from './Layout.styled';
+import {StyledLink, StyledList } from './Layout.styled';
 
 const Layout = () => {
   return (
