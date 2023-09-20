@@ -15,7 +15,6 @@ const Layout = () => {
         </li>
       </StyledList>
 
-      <StyledHr />
       <Suspense fallback={<h2>Loading...</h2>}>
         <OutletWrapper>
           <Outlet />

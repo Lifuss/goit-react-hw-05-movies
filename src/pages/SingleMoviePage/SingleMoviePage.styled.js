@@ -14,11 +14,19 @@ export const StyledBox = styled(Flex)`
   padding: 1rem;
 `;
 
+export const StyledTextBox = styled.div`
+  width: 1300px;
+`;
+export const StyledSubTitle = styled.h3`
+  font-size: 25px;
+  margin-bottom: 10px;
+`;
+
 export const StyledNavLink = styled(NavLink)`
   width: 100px;
   height: 50px;
-  color: #99ff99;
-  background-color: #333333;
+  color: white;
+  background-color: #939393;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   display: flex;
@@ -27,8 +35,8 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   transition: all 250ms linear;
   &.active {
-    background-color: gold;
-    color: black;
+    background-color: #424242;
+    color: #fff;
   }
 `;
 
@@ -39,9 +47,9 @@ export const StyledGoBackLink = styled(Link)`
   height: 40px;
   width: 80px;
   text-decoration: none;
-  color: #99ff99;
-  background-color: #333333;
-  border: 1px solid black;
+  color: white;
+  background-color: #939393;
+  border: 1px solid #6aece1;
   border-radius: 10%;
   margin-bottom: 1rem;
 

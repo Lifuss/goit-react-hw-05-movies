@@ -1,14 +1,14 @@
 import { useFetch } from 'hooks/useFetch';
 import React from 'react';
 import { getAllMovies } from 'services/api';
-import { StyledHomePageList, StyledLink } from './Homepage.styled';
+import { StyledH2, StyledHomePageList, StyledLink } from './Homepage.styled';
 
 const Homepage = () => {
   const [data] = useFetch(getAllMovies);
 
   return (
     <>
-      <h2>Trending movies</h2>
+      <StyledH2>Trending movies</StyledH2>
       <StyledHomePageList>
         {data.map(({ id, original_title }) => (
           <li key={id}>

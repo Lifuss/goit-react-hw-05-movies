@@ -8,7 +8,10 @@ import {
   StyledGoBackLink,
   StyledImg,
   StyledNavLink,
+  StyledSubTitle,
+  StyledTextBox,
 } from './SingleMoviePage.styled';
+import { StyledText, StyledTitle } from 'pages/Homepage/Homepage.styled';
 
 const SingleMoviePage = () => {
   const { id } = useParams();
@@ -26,14 +29,14 @@ const SingleMoviePage = () => {
           src={`https://image.tmdb.org/t/p/w342${poster_path}`}
           alt=""
         />
-        <div>
-          <h2>{title}</h2>
-          <p>User score {Math.round(vote_average * 10)}%</p>
-          <h3>Overview</h3>
-          <p>{overview}</p>
-          <h3>Genres</h3>
-          <p>{genres?.map(el => el.name).join(', ')}</p>
-        </div>
+        <StyledTextBox>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledText>User score {Math.round(vote_average * 10)}%</StyledText>
+          <StyledSubTitle>Overview</StyledSubTitle>
+          <StyledText>{overview}</StyledText>
+          <StyledSubTitle>Genres</StyledSubTitle>
+          <StyledText>{genres?.map(el => el.name).join(', ')}</StyledText>
+        </StyledTextBox>
       </Flex>
       <hr />
       <StyledBox>
