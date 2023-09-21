@@ -1,10 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
-// import Homepage from 'pages/Homepage/Homepage';
-// import Movies from 'pages/Movies/Movies';
-// import SingleMoviePage from 'pages/SingleMoviePage/SingleMoviePage';
-// import Cast from './Cast/Cast';
-// import Reviews from './Reviews/Reviews';
+
 import { lazy } from 'react';
 
 const Homepage = lazy(() => import('pages/Homepage/Homepage'));
@@ -14,6 +10,7 @@ const SingleMoviePage = lazy(() =>
 );
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));
+const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'));
 
 const App = () => {
   return (
@@ -27,6 +24,7 @@ const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
       </Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 };
